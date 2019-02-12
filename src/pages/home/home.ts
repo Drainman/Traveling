@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,ToastController,LoadingController } from 'ionic-angular';
 import { BluetoothSerial } from '@ionic-native/bluetooth-serial';
-
 
 @Component({
   selector: 'page-home',
@@ -11,14 +10,17 @@ export class HomePage {
 
 	deviceId : string = "24:0A:C4:02:D2:82";
  	logmsgZone : Element;
+	bluetoothOn : boolean = false;
 
-	constructor(private bluetoothSerial: BluetoothSerial, public navCtrl: NavController) {}
+	constructor(private bluetoothSerial: BluetoothSerial, public navCtrl: NavController,private toastCtrl : ToastController,public loadingCtrl: LoadingController) {}
 
-	present(){
-		this.bluetoothSerial.enable();
-		document.getElementById("msg_log_block").innerHTML += "[INFO] ~ Use default address : " + this.deviceId +".<br>";
-		this.bluetoothSerial.connect(this.deviceId);//.then( success => {this.testConnexion;}, error => {this.onError("ERROR","Connexion failed."); } );
-		this.testConnexion();
+	present(){}
+
+	showToast(msj) {
+		const toast = this.toastCtrl.create({
+		message: msj,
+		duration: 1000});
+	toast.present();
 	}
 
 	testConnexion()

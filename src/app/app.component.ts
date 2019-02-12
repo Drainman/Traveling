@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import {PilotagePage} from '../pages/pilotage/pilotage';
 import {ScenariosPage} from '../pages/scenarios/scenarios';
+import {SettingsPage} from '../pages/settings/settings';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,7 +27,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Pilotage', component: PilotagePage },
-      { title: 'Scenarios', component: ScenariosPage}
+      { title: 'Scenarios', component: ScenariosPage},
+	  { title : 'Settings', component : SettingsPage}
     ];
 
   }

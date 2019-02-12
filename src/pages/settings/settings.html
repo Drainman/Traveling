@@ -10,8 +10,42 @@
 <ion-content padding>
   <h2> <ion-icon name="construct"></ion-icon> Settings </h2>
   <hr>
-  <h3> <ion-icon name="globe"></ion-icon>  Connexion </h3>
+
+  <button ion-button full class="submit-button" (click)="present()" *ngIf="!bluetoothOn">
+  Activer le bluetooth
+</button>
+  <div *ngIf="bluetoothOn">
+        <!-- <button ion-button full class="submit-button" (click)="scanForUnpaired()">
+          Ajout d'un nouvel appareil
+        </button>
+        <p>Unpaired</p>
+        <ion-row>
+          <ion-col>
+            <ion-list radio-group [(ngModel)]="unpairedDeviceID">
+              <ion-item *ngFor="let i of unpairedList;let j=index">
+                <ion-label>{{i.name}}</ion-label>
+                <ion-radio value="{{j}}" ></ion-radio>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row> -->
+
+        <p>paired</p>
+        <ion-row>
+          <ion-col>
+            <ion-list radio-group [(ngModel)]="pairedDeviceID" *ngIf="listToggle">
+              <ion-item *ngFor="let i of pairedList;let j=index">
+                <ion-label>{{i.name}}</ion-label>
+                <ion-radio value="{{j}}" ></ion-radio>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
 
 
+        <button ion-button full class="submit-button" *ngIf="listToggle" (click)="selectDevice()">
+          <ion-icon name="bluetooth"></ion-icon>&nbsp;Se connecter à l'appareil sélectionné
+        </button>
+      </div>
 
 </ion-content>

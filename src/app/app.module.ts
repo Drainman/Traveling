@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { PilotagePage } from '../pages/pilotage/pilotage';
 import { ScenariosPage } from '../pages/scenarios/scenarios';
+import {SettingsPage} from '../pages/settings/settings';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,7 +19,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     PilotagePage,
-    ScenariosPage
+    ScenariosPage,
+	SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     PilotagePage,
-   ScenariosPage
+   ScenariosPage,
+   SettingsPage
   ],
   providers: [
     StatusBar,
