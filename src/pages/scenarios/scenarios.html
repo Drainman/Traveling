@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Scenarios</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button  block light (click)="doRadio()">Select</button>
+  <hr><br>
+  <div id="a_scenario_block">
+    <h4> Name : <span id="scen_name">{{current_scen}}</span></h4>
+    <div id="comm_zone" padding>
+      <ion-icon name="information-circle"></ion-icon> Commentaire
+      <div id="comm_block" padding> This is a super scenario...</div>
+    </div>
+  </div>
+  <br><hr>
+  <button ion-button  block light (click)="launch_scenario()">Launch</button>
+
+</ion-content>

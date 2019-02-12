@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Pilotage</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>  <ion-icon name="game-controller-b"></ion-icon> Pilotage </h2>
+  <ion-card>
+    <div style="position: relative; left: 0; top: 0; min-height: 200px; background-color: #dddddd" id="zone_joystick"></div>
+  </ion-card>
+  <hr>
+  <div id="res"> </div>
+  <!-- GRID INFOS -->
+  <ion-grid id="info_block" padding>
+    <!-- ICONS -->
+    <ion-row text-center>
+      <ion-col><ion-icon name="bluetooth" color="danger"></ion-icon></ion-col>
+      <ion-col><ion-icon name="speedometer" color="secondary"></ion-icon></ion-col>
+      <ion-col><ion-icon name="grid-outline" color="secondary"></ion-icon></ion-col>
+    </ion-row>
+    <!-- VALUES -->
+    <ion-row text-center>
+      <ion-col>Disconnect</ion-col>
+      <ion-col>none</ion-col>
+      <ion-col>(none;none)</ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

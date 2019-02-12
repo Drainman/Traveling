@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3 text-center>Traveling-Project</h3>
+  <!-- INFORMATION BLOCK -->
+  <hr>
+  <div id="information_block">
+    <ion-icon name="bluetooth"></ion-icon> ~ status : <span id="statusCo">Deconnecté.</span><br>
+    <ion-icon name="information-circle"></ion-icon> ~ <span id="statusSyncrho">Application not synchronised.</span>
+  </div><hr>
+
+  <!-- BUTTON -->
+  <div id="synchro_block" text-center>
+    <button ion-button round (click)="present()" padding>Syncrhonisation</button>
+  </div><hr>
+
+  <div id="block_log">
+    <ion-icon name="information-circle"></ion-icon> Logs
+    <div id="msg_log_block" text-left> </div>
+  </div>
+
+</ion-content>
